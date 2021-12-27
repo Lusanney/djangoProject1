@@ -63,13 +63,12 @@ ROOT_URLCONF = 'djangoProject1.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates']
-        ,
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
-                'django.template.context_processors.debug',
                 'django.template.context_processors.request',
+                'django.template.context_processors.debug',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
@@ -135,5 +134,8 @@ STATIC_URL = 'static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
+
+LOGIN_REDIRECT_URL = '/'
+LOGIN_URL = 'accounts/login/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
